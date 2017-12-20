@@ -1,0 +1,23 @@
+Arrow Keys - Move the map.
+
+  X		Y		Z
+[FN] [HOME] [PG UP]   Scale - UP
+[Del] [END] [PG DWN]  Scale - DOWN
+
+NUMPAD
+
+  X	 	Y	  Z
+[F16] [F17] [F18] Spin -1
+[Clr] [ = ] [ / ] Spin +1
+[ 7	] [ 8 ]	[ 9 ] Spin 0
+
+[ 4 ] [ 5 ] [ 6 ]  (Rotate X counterclockwise), (Rotate Y counterclockwise), (Rotate X clockwise)
+[ 1 ] [ 2 ] [ 3 ]  (Rotate Z counterclockwise), (Rotate Y clockwise), (Rotate Z clockwise)
+
+NOTE: If you want to change to color scales change to multiplier at the ends of parseline.c lines 26, and 32
+"(*map)[*pos].color = 0x00FFFFFF - (*map)[*pos].z * 7000" < (play with the 7000 until you get the desired results)
+
+If you're attempting to read a map with large Z values, add a z-value scalar in parseline.c line 53
+"(*map)[*pos].z = get_z(buf, &j);" ---> "(*map)[*pos].z = get_z(buf, &j) / 10" would divide all the z values by 10
+
+

@@ -6,7 +6,7 @@
 /*   By: ikarishe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 14:43:31 by ikarishe          #+#    #+#             */
-/*   Updated: 2017/12/20 13:17:43 by ikarishe         ###   ########.fr       */
+/*   Updated: 2017/12/20 13:40:05 by ikarishe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ void	draw_world(t_info *info, t_pos **map_t)
 	{
 		if (j == (int)((info->dim->x) * i) - 1)
 		{
-//			draw_line(info, &((*map_t)[j]), &((*map_t)[j + (int)info->dim->x]));
+			draw_line(info, &((*map_t)[j]), &((*map_t)[j + (int)info->dim->x]));
 			j++;
 			i++;
 			continue;
 		}
-//		draw_line(info, &((*map_t)[j]), &((*map_t)[j + 1]));
+		draw_line(info, &((*map_t)[j]), &((*map_t)[j + 1]));
 		if (j < (info->dim->x * info->dim->y - info->dim->x))
 		{
-//			draw_line(info, &((*map_t)[j]), &((*map_t)[j + (int)info->dim->x]));
+			draw_line(info, &((*map_t)[j]), &((*map_t)[j + (int)info->dim->x]));
 		}
 		j++;
 	}
